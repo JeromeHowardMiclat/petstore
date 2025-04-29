@@ -1,13 +1,10 @@
 package com.miclat.pet;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +20,12 @@ public class PetController {
     public ResponseEntity<Pet> createPet(@RequestBody Pet pet) {
         Pet savedPet = petRepository.save(pet);
         return ResponseEntity.ok().body(savedPet);
+    }
+
+    @PostMapping("/bulk")
+    public ResponseEntity<List<Pet>> createPets(@RequestBody List<Pet> pets) {
+        List<Pet> savedPets = petRepository.saveAll(pets); // Save all pets in bulk
+        return ResponseEntity.ok(savedPets); // Return the list of saved pets
     }
 
     @PutMapping("/{id}")
@@ -107,5 +110,3 @@ public class PetController {
     }
 
 }
-
-
