@@ -103,3 +103,37 @@ form button:last-child {
 form button:hover {
   background-color: #218838;
 }
+
+/* Edit Button */
+.edit-button {
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px; /* Add spacing to the right */
+  margin-bottom: 10px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #dc3545; /* Red background */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px; /* Add spacing to the left */
+  
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
